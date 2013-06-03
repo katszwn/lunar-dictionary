@@ -10,12 +10,12 @@ However, if you want to run it locally, here are the requirements:
 <li>Ruby 1.9.3</li>
 <li>Sinatra 1.4.2 </li>
 <li>RubyGems 2.0.3 </li>
-<li>Bundler (1.3.2)</li>
+<li>Bundler 1.3.2</li>
 <li>PostgreSQL 9.1.9 </li>
 </ul>
 
 At first, you need to create a psql database and set database data (name, user, password) in 'environments.rb' and 'database.yml'<br>
-Then run:
+Then run: <br>
 <code>bundle install</code><br>
 <code>rake db:migrate </code><br>
 Now you need to restore the database from dict.dump file (f.ex. using pg_dump).
