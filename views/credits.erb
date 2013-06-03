@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>	
+
+	<!-- HEADER -->
+<header class="span11 offset1">
+	<a href="/"><h1>Welcome to lunarDict ! </h1></a>
+</header>	
+
+<div class="row-fluid">	
+	
+	<!-- SEARCH BAR -->
+	<section>			
+		<div class="span4 offset4" id="eng_form">
+			<form  action="/find_eng_word" method="POST">
+				<input class="form-text" type="text" name="word[english_word]" placeholder="English word" />
+				<input class="form-button" type="submit" value="To Polish" />
+			</form>
+		</div>
+		
+		<div class="span4 offset3" id="pol_form">
+			<form action="/find_pol_word" method="POST">
+				<input class="form-text" type="text" name="word[polish_word]" placeholder="Polish word" />
+				<input class="form-button" type="submit" value="To English" />
+			</form>
+		</div>			
+	</section>
+	
+	<!--CONTENT-->
+	<section class="span11 offset1" id="content">	
+			
+		<p>The dictionary data was taken from <a href="http://www.cambridge.org/gb/elt/catalogue/subject/project/custom/item6892877/English-Unlimited-Bilingual-Wordlists/?site_locale=en_GB&currentSubjectID=382378">Cambridge University Press website</a>, saved as .csv and added to local PostgreSQL database.</p>
+
+		<p>The background image was taken from <a href="http://subtlepatterns.com/">Subtle Patterns</a></p>
+
+		<p>In my CSS stylesheet i used grid system from <a href="http://twitter.github.io/bootstrap/scaffolding.html#gridSystem">Bootstrap</a>. </p>
+
+		<p><a href="/">>> BACK</a> </p>
+
+	
+	</section>
+
+	
+	<!-- ADDING WORDS TO DATABASE -->
+	<footer class="span11 offset1">
+
+			<div><p>We have <%= @words_count %> words in our database!<br>
+			<strong>... want to contribute?</strong></p>
+			
+			<form action="/create_word" method="POST">
+				<input class="search-text" type="text" name="word[english_word]" placeholder="English word" />
+				<input class="search-text" type="text" name="word[polish_word]" placeholder="Polish word" />
+				<input class="search-text" type="text" name="word[explanation]" placeholder="Example" />
+				<input class="search-button" type="submit" value="Save" />
+			</form>	<div>			
+
+	<footer>
+</div>
+</body>
+</html>

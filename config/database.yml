@@ -1,0 +1,6 @@
+development:
+  adapter: postgresql
+  database: dict
+  username: dict
+  password: 
+  host: localhost

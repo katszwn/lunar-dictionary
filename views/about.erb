@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>	
+
+	<!-- HEADER -->
+<header class="span11 offset1">
+	<a href="/"><h1>Welcome to lunarDict ! </h1></a>
+</header>	
+
+<div class="row-fluid">	
+	
+	<!-- SEARCH BAR -->
+	<section>			
+		<div class="span4 offset4" id="eng_form">
+			<form  action="/find_eng_word" method="POST">
+				<input class="form-text" type="text" name="word[english_word]" placeholder="English word" />
+				<input class="form-button" type="submit" value="To Polish" />
+			</form>
+		</div>
+		
+		<div class="span4 offset3" id="pol_form">
+			<form action="/find_pol_word" method="POST">
+				<input class="form-text" type="text" name="word[polish_word]" placeholder="Polish word" />
+				<input class="form-button" type="submit" value="To English" />
+			</form>
+		</div>			
+	</section>
+	
+	<!--CONTENT-->
+	<section class="span11 offset1" id="content">	
+		
+		<p>I'm an applied coputer science student. So far i've been working mainly in Java, so this project (being my first one in Ruby!) was extremely interesting, and i must say i do like what i've been doing for last 10 days. I realized the amazing possibilities of these technologies i've been working with and i'd love to continue this work. I'm really glad i've taken up this challenge! </p>
+
+		<p>In programming, i appreciate the dynamics of change - i'm an active person and i enjoy learning new things and solving problems. In my free time, i make copper <a href="https://www.facebook.com/media/set/?set=a.117041158356552.15019.100001520064646&type=3">jewelry</a> (out of recycled cables), train tribal fusion dance, enjoy sci-fi (books, films and tv series) and good music. I also try to find ways of fighting the procrastination, mainly using Zen to done & Pomodoro technique, but i like testing new methods as well.</p>
+
+		<p>I should probably include in this section something about my personal and professional achievements. When it comes to the educational accomplishments, i'm pretty proud of the <a href="http://www.youtube.com/watch?feature=player_embedded&v=lUz51bQ--Hc">prize</a> during the 50th AGH student's organisations conference, and giving a paper on technologies presented in sci-fi vs science during the XXXVIth National Astronomy Youth Conference in 2010. Besides, i passed CAE - si speak fluent English and fairly good French.</p> 
+
+		<p>Katarzyna Szawan, kat.szwn[at]gmail.com</p>
+
+		<p><a href="/">>> BACK</a> </p>	
+	</section>
+
+	
+	<!-- ADDING WORDS TO DATABASE -->
+	<footer class="span11 offset1">
+
+			<div><p>We have <%= @words_count %> words in our database!<br>
+			<strong>... want to contribute?</strong></p>
+			
+			<form action="/create_word" method="POST">
+				<input class="search-text" type="text" name="word[english_word]" placeholder="English word" />
+				<input class="search-text" type="text" name="word[polish_word]" placeholder="Polish word" />
+				<input class="search-text" type="text" name="word[explanation]" placeholder="Example" />
+				<input class="search-button" type="submit" value="Save" />
+			</form>	<div>			
+
+	<footer>
+</div>
+</body>
+</html>
