@@ -8,15 +8,18 @@ describe "app" do
     last_response.body.should match(/Pick a word to translate!/)
   end
 
-  it "should find an english word and print its translation" do
-  	@word = Word.where(:english_word => 'house')
-  	visit '/find_eng_word'
+  it "should load about page" do
+    get '/about'
+    last_response.should be_ok
+    last_response.body.should match(/kat.szwn[at]gmail.com/)
   	
   end	
 
-  it "should find a polish word and print its translation" do
-  	@word = Word.where(:polish_word => 'dom')
-
-  end	
+  it "should load credits page" do
+    get '/credits'
+    last_response.should be_ok
+    last_response.body.should match(/Bootstrap/)
+    
+  end 
 
 end
