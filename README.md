@@ -2,7 +2,7 @@
 
 A simple English-Polish-English dictionary written in Ruby and Sinatra. 
 
-It is currently deployed on heroku and can be accessed at <h2>http://lunar-dict.herokuapp.com/</h2>. 
+It is currently deployed on heroku and can be accessed at <h2>http://lunar-dictionary.herokuapp.com</h2>. 
 
 However, if you want to run it locally, here are the requirements: 
 <ul>
