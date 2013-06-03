@@ -2,7 +2,11 @@
 
 A simple English-Polish-English dictionary written in Ruby and Sinatra. 
 
+<<<<<<< HEAD
+It is currently deployed on heroku and can be accessed at <h2>http://lunar-dictionary.herokuapp.com</h2>
+=======
 It is currently deployed on heroku and can be accessed at <h2>http://lunar-dictionary.herokuapp.com</h2>. 
+>>>>>>> d43302593e14cdc559097af8263d7c0429981765
 
 However, if you want to run it locally, here are the requirements: 
 <ul>
@@ -13,12 +17,12 @@ However, if you want to run it locally, here are the requirements:
 <li>PostgreSQL 9.1.9 </li>
 </ul>
 
-At first, you need to create a psql database and set database data (name, user, password) in 'environments.rb' and 'database.yml'
+At first, you need to create a psql database and set database data (name, user, password) in 'environments.rb' and 'database.yml'<br>
 Then run:
-<code>bundle install</code>
-<code>rake db:migrate </code>
+<code>bundle install</code><br>
+<code>rake db:migrate </code><br>
 Now you need to restore the database from dict.dump file (f.ex. using pg_dump).
-Then change directory to the project's, run the application: 
-<code>ruby app.rb</code>
+Then change directory to the project's, run the application: <br>
+<code>ruby app.rb</code> <br>
 ...and type http://localhost:4567/ in your browser.
 
