@@ -43,9 +43,10 @@ end
 post '/create_word' do
   @words_count = Word.count
   if Word.where(:english_word => params[:word][:english_word]).first == nil 
-    ActiveRecord::Base.connection.tables.each do |t|
-      ActiveRecord::Base.connection.reset_pk_sequence!(t)
-    end
+    # >>> Problem with pk-sequence	
+    #ActiveRecord::Base.connection.tables.each do |t| 
+    #  ActiveRecord::Base.connection.reset_pk_sequence!(t)
+    #end
     @word = Word.create!(     
     	:english_word => params[:word][:english_word],
     	:polish_word => params[:word][:polish_word],
