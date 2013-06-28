@@ -14,12 +14,10 @@ However, if you want to run it locally, here are the requirements:
 <li>PostgreSQL 9.1.9 </li>
 </ul>
 
-At first, you need to create a psql database and set database data (name, user, password) in 'environments.rb' and 'database.yml'<br>
-Then run: <br>
+ At first, you need to run: <br>
 <code>bundle install</code><br>
 <code>rake db:migrate </code><br>
-Now you need to restore the database from dict.dump file (f.ex. using pg_dump).
-Then change directory to the project's, run the application: <br>
+Then run the application: <br>
 <code>ruby app.rb</code> <br>
 ...and type http://localhost:4567/ in your browser.
 
